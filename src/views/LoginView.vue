@@ -1,25 +1,12 @@
 <script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue';
-import Typed from 'typed.js'; 
 
-export default defineComponent({
-  mounted() {
-    const typed = new Typed('.text', {
-      strings: ["Github", "Yandex", "Telegram", "Microsoft"],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1000,
-      loop: true,
-    });
-  },
-});
 </script>
 
 <template>
   <div style="">
     <div
-      class="w-full max-w-sm p-4 bg-white border border-gray-400  shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mt-8"
-      style="margin-left: auto; margin-right: auto"
+      class="w-full p-4 bg-white border border-gray-400  shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700 mt-8 rounded-lg"
+      style="margin-left: auto; margin-right: auto; width: 450px "
     >
       <form class="space-y-6" action="#">
 
@@ -73,7 +60,7 @@ export default defineComponent({
         </div>
         <button
           type="submit"
-          class="login-btn w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Login to your account
         </button>
@@ -81,41 +68,32 @@ export default defineComponent({
         <div class="flex" style="gap: 5px">
           <div class="w-full bg-gray-400 mt-3 mx-2" style="height: 1px"></div>
 
-          <div class="text-gray-500 text-sm " style="width: 600px">Or Login in with      
+          <div class="text-gray-500 text-sm ">Or     
           </div>
 
           <div class="text text-gray-500 text-sm ;"></div>
           <div class="w-full bg-gray-400 mt-3 mx-2" style="height: 1px"></div>
         </div>
+        <button
+          type="submit"
+          class="w-full border border-gray-400 text-dark bg-white hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Login in with Github
+        </button>
+        <div class="flex text-sm font-medium text-gray-500 dark:text-gray-300" style="justify-content: center; align-items:center;">
+    
+    Not registered?
+    <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
 
-        <div class="asosiy-sci">
-          <a href="#"><i class="bx bxl-github"></i></a>
-          <a href="#" class="pb-1"><i class="bx bxl-yandex">Я</i></a>
-          <a href="#"><i class="bx bxl-telegram"></i></a>
-          <a href="#"><i class="bx bxl-microsoft"></i></a>
-        </div>
+  </div>
       </form>
     </div>
 
-    <div
-      class="w-full max-w-sm px-4 py-3 bg-white border border-gray-400 shadow  dark:bg-gray-800 dark:border-gray-700 mt-2 mb-4"
-      style="margin-left: auto; margin-right: auto"
-    >
-      <div class="flex text-sm font-medium text-gray-500 dark:text-gray-300" style="justify-content: center; align-items:center;">
     
-        Not registered?
-        <a href="#" class="text-blue-700 hover:underline dark:text-blue-500">Create account</a>
-  
-      </div>
-    </div>
   </div>
 </template>
 <style scoped>
-.asosiy-sci {
-  width: full;
-  display: flex;
-  margin-right:30px;
-}
+
 
 .login-btn:hover{
   box-shadow: 0 0 10px blue;
